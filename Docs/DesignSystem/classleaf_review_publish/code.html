@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Source+Serif+4:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100%;margin:0;padding:0;background-color:#fdf9f5;}body{overscroll-behavior:none;-webkit-font-smoothing:antialiased;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-primary-container": "#afefea", "error": "#ba1a1a", "inverse-surface": "#31302e", "on-tertiary-fixed-variant": "#6b3a24", "primary-fixed-dim": "#93d2cd", "on-surface": "#1c1b1a", "on-error-container": "#93000a", "secondary-fixed-dim": "#cdc5bc", "tertiary": "#734029", "surface-container-high": "#ece7e4", "inverse-on-surface": "#f4f0ec", "on-tertiary-container": "#ffdccf", "surface-variant": "#e6e2de", "surface-tint": "#276864", "tertiary-fixed-dim": "#feb698", "secondary": "#635e56", "surface": "#fdf9f5", "primary": "#0e5653", "on-secondary-fixed": "#1e1b15", "surface-bright": "#fdf9f5", "on-secondary-fixed-variant": "#4a463f", "primary-fixed": "#aeeee9", "on-error": "#ffffff", "on-primary-fixed-variant": "#01504c", "error-container": "#ffdad6", "surface-container-lowest": "#ffffff", "outline-variant": "#bfc8c7", "on-primary": "#ffffff", "on-tertiary-fixed": "#351001", "tertiary-container": "#8f573f", "tertiary-fixed": "#ffdbcd", "on-background": "#1c1b1a", "on-primary-fixed": "#00201e", "on-tertiary": "#ffffff", "primary-container": "#2f6f6b", "surface-container-highest": "#e6e2de", "secondary-fixed": "#e9e1d7", "surface-dim": "#ddd9d6", "outline": "#6f7978", "on-surface-variant": "#3f4947", "surface-container": "#f1edea", "on-secondary": "#ffffff", "secondary-container": "#e6dfd4", "inverse-primary": "#93d2cd", "background": "#fdf9f5", "surface-container-low": "#f7f3ef", "on-secondary-container": "#67625a" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-sm": "0.5rem", "space-lg": "1.5rem", "space-md": "1rem", "gutter": "1.5rem", "space-xs": "0.25rem", "margin-mobile": "1.25rem", "gutter-mobile": "1rem", "space-xl": "2rem", "margin": "3rem" }, fontFamily: { "label-md": ["Inter"], "headline-lg-mobile": ["\"Source Serif 4\""], "editorial-body-lg": ["\"Source Serif 4\""], "headline-md": ["\"Source Serif 4\""], "display-mobile": ["\"Source Serif 4\""], "ui-body": ["Inter"], "display": ["\"Source Serif 4\""], "headline-lg": ["\"Source Serif 4\""], "editorial-body": ["\"Source Serif 4\""], "ui-body-medium": ["Inter"], "headline-sm": ["\"Source Serif 4\""], "label-sm": ["Inter"] }, fontSize: { "label-md": ["13px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "500" }], "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "editorial-body-lg": ["18px", { "lineHeight": "30px", "fontWeight": "400" }], "headline-md": ["22px", { "lineHeight": "30px", "fontWeight": "600" }], "display-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "ui-body": ["15px", { "lineHeight": "22px", "fontWeight": "400" }], "display": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "editorial-body": ["17px", { "lineHeight": "29px", "fontWeight": "400" }], "ui-body-medium": ["15px", { "lineHeight": "22px", "fontWeight": "500" }], "headline-sm": ["18px", { "lineHeight": "26px", "fontWeight": "600" }], "label-sm": ["11px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600" }] } } } }</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-ui-body text-ui-body text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-16 px-margin-mobile flex items-center justify-between"><div class="flex items-center gap-space-xs"><button aria-label="Go back" class="w-11 h-11 -ml-2 flex items-center justify-center text-on-surface hover:text-primary transition-colors" onclick="history.back()"><span class="material-symbols-outlined text-[22px]">arrow_back</span></button><img alt="ClassLeaf Emblem" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrAaztFFVqz1lvaOgF9VSJO0XH0_TZQULkqPml39cfuCHL2E5YgrgvQ3t4PGXfsILO7FvN4qo4OU8Rn6geCjZPO12gEDGpFOuTF-m_on_4FRuc0M3bRDIEgXlbGgKpdX9X0mi4FSRZdtzoZ2hS_1p35kcaa4WNmpP6310MhAav7XwHJkrz85B77edCzRyb_Q9D2VjH7Zuk_TNa8_FlRthIAGzcalIIseLzKmmRn3Qg"/><span class="font-headline-sm text-headline-sm text-on-surface truncate max-w-[140px]">Reader Mode</span></div><div class="flex items-center gap-space-sm"><button aria-label="Bookmark" class="w-11 h-11 flex items-center justify-center rounded-full text-secondary hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">bookmark_border</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-16 pb-safe px-margin-mobile bg-surface flex-1"><div class="flex flex-col w-full pb-28">
+<!-- Top Meta & Review Utility Bar -->
+<div class="flex items-center justify-between py-space-sm gap-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+        DRAFT
+      </span>
+<div class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-amber-100 text-amber-900 font-label-sm text-label-sm shadow-sm transition-all" id="flag-pill">
+<span class="material-symbols-outlined text-[14px] text-amber-700">flag</span>
+<span id="flag-count-text">4 to check</span>
+</div>
+</div>
+<!-- Toggle View Segmented Control -->
+<div class="flex items-center bg-surface-container-high p-0.5 rounded-xl shadow-inner">
+<button class="px-3 py-1.5 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md transition-all shadow-sm flex items-center gap-1" id="btn-view-text" onclick="switchView('text')">
+<span class="material-symbols-outlined text-[16px]">edit_note</span>
+        Text
+      </button>
+<button class="px-3 py-1.5 rounded-lg text-secondary hover:text-on-surface font-label-md text-label-md transition-all flex items-center gap-1" id="btn-view-photo" onclick="switchView('photo')">
+<span class="material-symbols-outlined text-[16px]">image</span>
+        Photo
+      </button>
+</div>
+</div>
+<!-- Interactive Post-Publish Success Banner (Dismissible & Simulated) -->
+<div class="hidden mb-space-md p-space-md rounded-xl bg-primary-fixed text-on-primary-fixed shadow-sm transition-all duration-300" id="publish-banner">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px] mt-0.5">verified</span>
+<div class="flex flex-col">
+<span class="font-ui-body-medium text-ui-body-medium text-primary">Published to your Course Notebook</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant truncate max-w-[210px]">classleaf.com/alice/chem-242/lecture-14</span>
+</div>
+</div>
+<button class="px-2.5 py-1 rounded-lg bg-primary text-on-primary font-label-md text-label-md flex items-center gap-1 shrink-0 active:scale-95 transition-transform" onclick="copyPublishLink(this)">
+<span class="material-symbols-outlined text-[15px]">content_copy</span>
+<span>Copy</span>
+</button>
+</div>
+</div>
+<!-- Manuscript Preview Collapsible Drawer Banner -->
+<div class="mb-space-md bg-surface-container rounded-xl p-space-sm flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg overflow-hidden shrink-0 bg-surface-container-highest shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Close-up macro of organic chemistry lecture notes in blue ink on gridded cream archival notebook paper showing chemical rings and catalytic formulas" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDE6MUJhm_ts3LrYn5lIeCd4X5bAM2hL2kUBUZa7h687iI4mVtKLsUs8Xhtxm-eB01XLyhaM_rbRmqktizm1yYSGK84h6A1_7Lj_knmL2zx_FhvvNlasztzLn-aj9EHPlNjurlqb1A_HS2dAoFQ_3OouBdQSrKfIQzm9lmx0QPncKH5ofuUpQAM_gKmB0VtgQzj5REqiIOiub2zy4Ppx9hD1kW-vqzEPVs_VnRR"/>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-medium">Sheet 1: Electrophilic Substitution</span>
+<span class="font-label-sm text-label-sm text-secondary">Tap to compare side-by-side</span>
+</div>
+</div>
+<button class="px-2.5 py-1.5 rounded-lg bg-surface-container-highest hover:bg-surface-variant text-on-surface-variant font-label-md text-label-md flex items-center gap-1 transition-colors" onclick="toggleSidePeek()">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span>Peek</span>
+</button>
+</div>
+<!-- Side-by-side Peek Sliding Panel -->
+<div class="hidden mb-space-md p-space-sm bg-surface-container-low rounded-xl shadow-sm" id="side-peek-panel">
+<div class="flex items-center justify-between pb-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Original Manuscript Scan</span>
+<button class="text-secondary hover:text-on-surface" onclick="toggleSidePeek()">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<div class="w-full h-44 rounded-lg overflow-hidden relative shadow-inner">
+<img class="w-full h-full object-cover" data-alt="Full view of archival handwritten chemistry notes on lined ivory paper with hand-drawn benzene ring intermediates and reaction pathways in dark blue ink" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8mYw5zmWKMeR1fTriMfj95BAMcKbSyDNy6wBSQnXEY30Y-egZPFaUh8ZNfDUcjzAJzR8-XnWKeo0rXnQv-G6K8D1GDXk0ZHzhkMlXM7nkPdVdp2ZsRtQj3ZKBu0607DDEpHsvqIXQuh3TwtpDXKCVtVOuJ58oUFsVqIxdADn9b6MNrPlLvd3oQVJeeU5qATgmE3J9mM_mxg3DhOQprZ8IR6HbsbAYe-LzRKZf"/>
+<div class="absolute bottom-2 right-2 px-2 py-1 rounded bg-inverse-surface/80 backdrop-blur-sm text-inverse-on-surface font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">pinch</span> Pinch to zoom
+      </div>
+</div>
+</div>
+<!-- Editorial Document Body Container -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col relative">
+<!-- Header metadata within sheet -->
+<div class="flex flex-col gap-1 pb-space-md mb-space-sm">
+<div class="flex items-center gap-1.5 text-secondary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">calendar_today</span>
+<span>Oct 24, 2024</span>
+<span class="mx-1">•</span>
+<span class="material-symbols-outlined text-[14px]">document_scanner</span>
+<span>2 handwritten sheets</span>
+</div>
+<h1 class="font-headline-md text-headline-md text-on-surface leading-tight tracking-tight">
+        Lecture 14: Electrophilic Aromatic Substitution
+      </h1>
+</div>
+<!-- Editorial Text Canvas -->
+<div class="relative font-editorial-body text-editorial-body text-on-surface space-y-4">
+<p class="leading-relaxed">
+        In benzene halogenation, ferric bromide acts as a Lewis acid catalyst to generate the highly reactive 
+        
+        <!-- Active Flagged Word Container with Popover Anchor -->
+<span class="relative inline-block">
+<mark class="bg-amber-100 text-amber-900 px-1.5 py-0.5 rounded cursor-pointer font-medium underline decoration-amber-500 decoration-2 underline-offset-4 hover:bg-amber-200 transition-colors" id="target-bromonium" onclick="togglePopover()">
+            bromonium
+          </mark>
+<!-- Floating Inspection Popover Card (Anchored to target word) -->
+</span></p><div class="absolute left-1/2 -translate-x-1/2 bottom-full mb-2 w-72 z-30 bg-surface-container-lowest rounded-xl shadow-xl p-3 flex flex-col gap-2.5 transition-all" id="uncertainty-popover">
+<!-- Popover Header -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5 text-amber-800 font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px] text-amber-600">psychology_alt</span>
+<span>AI Confidence: <strong>78%</strong></span>
+</div>
+<button class="text-secondary hover:text-on-surface p-0.5 rounded" onclick="togglePopover()">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+</div>
+<!-- OCR Handwritten Crop Visual -->
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Source Crop (Sheet 1, Ln 8)</span>
+<div class="w-full h-14 rounded-lg bg-surface-container-high overflow-hidden shadow-inner relative flex items-center justify-center">
+<img class="w-full h-full object-cover" data-alt="High-resolution zoomed snippet crop of cursive handwriting showing the word bromonium written in hasty dark blue ink with light smudge" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGOw8nTN-lpIOF3zcGeU1pdrWy907b78JUhzXEsVdasbMhowxp08Le_O2uGYgQpMTdryAZjFMaQVPEKMoJtv0XpBDTRQNFhEuvKhQukI-v6SQL32_a6jkR5SALVVJqP1DbX4SK1w2C8rUgQiJ2Xk4gnZIiJD_mTczOwl5Cz1Z4ex3xCwWcj_7mKfI7d8HjqywXhzeS6NAEUhxWompZFDyVLeiDrv-XJR5nOms0"/>
+</div>
+</div>
+<!-- Suggestion Quick-chips -->
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-secondary">Alternate reading:</span>
+<div class="flex gap-1.5">
+<button class="px-2 py-1 rounded-md bg-secondary-container text-on-secondary-container font-label-sm text-label-sm active:bg-primary active:text-on-primary transition-colors" onclick="applyCorrection('bromonium')">
+                  "bromonium" (keep)
+                </button>
+<button class="px-2 py-1 rounded-md bg-surface-container-high text-on-surface-variant hover:bg-surface-variant font-label-sm text-label-sm transition-colors" onclick="applyCorrection('bromine')">
+                  "bromine"
+                </button>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="grid grid-cols-2 gap-2 pt-1">
+<button class="w-full py-1.5 px-2 rounded-lg bg-surface-container hover:bg-surface-variant text-on-surface font-label-md text-label-md transition-colors flex items-center justify-center gap-1" onclick="resolveCurrentWord()">
+<span class="material-symbols-outlined text-[15px]">check</span>
+                Accept
+              </button>
+<button class="w-full py-1.5 px-2 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md transition-colors flex items-center justify-center gap-1 shadow-sm" onclick="openManualEdit()">
+<span class="material-symbols-outlined text-[15px]">edit</span>
+                Edit text
+              </button>
+</div>
+</div>
+
+
+        ion intermediate. The aromatic ring attacks the electrophile, temporarily disrupting 
+        
+        <mark class="bg-amber-100 text-amber-900 px-1.5 py-0.5 rounded cursor-pointer font-medium underline decoration-amber-500 decoration-2 underline-offset-4 hover:bg-amber-200 transition-colors" onclick="inspectWord('resonance stabilization')">
+          resonance stabilization
+        </mark> 
+        to form the sigma complex (Wheland intermediate).
+      <p></p>
+<p class="leading-relaxed">
+        Deprotonation by 
+        <mark class="bg-amber-100 text-amber-900 px-1.5 py-0.5 rounded cursor-pointer font-medium underline decoration-amber-500 decoration-2 underline-offset-4 hover:bg-amber-200 transition-colors" onclick="inspectWord('FeBr4-')">
+          FeBr4⁻
+        </mark> 
+        subsequently restores aromaticity, yielding bromobenzene and regenerating the catalyst with 
+        <mark class="bg-amber-100 text-amber-900 px-1.5 py-0.5 rounded cursor-pointer font-medium underline decoration-amber-500 decoration-2 underline-offset-4 hover:bg-amber-200 transition-colors" onclick="inspectWord('HBr')">
+          HBr
+        </mark> 
+        byproduct evolution.
+      </p>
+<!-- Structural Reaction Diagram Inset -->
+<div class="my-space-md p-space-md rounded-xl bg-surface-container-low flex flex-col items-center justify-center shadow-inner">
+<div class="w-full max-w-[280px] h-28 flex items-center justify-center">
+<svg class="w-full h-full text-primary" fill="none" stroke="currentColor" stroke-width="1.8" viewbox="0 0 280 100">
+<!-- Benzene Ring -->
+<polygon fill="none" points="50,25 75,39 75,69 50,83 25,69 25,39" stroke="currentColor"></polygon>
+<circle cx="50" cy="54" r="15" stroke="currentColor" stroke-dasharray="3 3"></circle>
+<!-- Plus Sign -->
+<path d="M92 54 L104 54 M98 48 L98 60" stroke="#635e56" stroke-width="1.5"></path>
+<!-- Br2 + FeBr3 -->
+<text fill="#1c1b1a" font-family="Inter" font-size="13" font-weight="500" x="115" y="58">Br₂ / FeBr₃</text>
+<!-- Reaction Arrow -->
+<path d="M190 54 L220 54 M214 49 L220 54 L214 59" stroke="currentColor" stroke-width="1.5"></path>
+<!-- Product ring stub -->
+<polygon points="255,30 270,39 270,60 255,69 240,60 240,39" stroke="currentColor"></polygon>
+<text fill="#0e5653" font-family="Inter" font-size="11" font-weight="600" x="250" y="24">Br</text>
+</svg>
+</div>
+<span class="font-label-sm text-label-sm text-secondary mt-1">Figure: Electrophilic aromatic substitution mechanism</span>
+</div>
+<p class="leading-relaxed">
+        The activation barrier for complex formation constitutes the rate-determining step, consistent with secondary kinetic isotope effect measurements observed during isotopic labeling trials.
+      </p>
+</div>
+</div>
+<!-- Resolution Progress Bar Widget -->
+<div class="mt-space-md px-space-md py-space-sm bg-surface-container rounded-xl flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-amber-100 flex items-center justify-center text-amber-800">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-medium">Readiness Check</span>
+<span class="font-label-sm text-label-sm text-secondary" id="readiness-subtitle">3 items pending editorial review</span>
+</div>
+</div>
+<button class="text-primary hover:text-primary-container font-label-md text-label-md font-medium" onclick="resolveAllFlags()">
+      Resolve all
+    </button>
+</div>
+<!-- Sticky Bottom Action Footer -->
+<div class="fixed bottom-0 left-0 right-0 z-40 bg-surface/95 backdrop-blur-md pb-safe shadow-[0_-4px_16px_rgba(0,0,0,0.06)] px-margin-mobile py-space-sm">
+<div class="max-w-[480px] mx-auto flex flex-col gap-1.5">
+<!-- Warning Tooltip Capsule -->
+<div class="flex items-center justify-center gap-1.5 py-1 text-center font-label-sm text-label-sm text-on-tertiary-fixed-variant bg-tertiary-fixed rounded-lg px-2 shadow-sm transition-all" id="publish-warning-tip">
+<span class="material-symbols-outlined text-[14px]">info</span>
+<span>Review recommended: 4 flagged words remain</span>
+</div>
+<!-- Action Button Row -->
+<div class="flex items-center gap-space-sm">
+<button class="h-11 px-4 rounded-xl bg-surface-container hover:bg-surface-variant text-on-surface font-label-md text-label-md flex items-center justify-center gap-1.5 active:scale-95 transition-all shrink-0" onclick="saveDraftToast()">
+<span class="material-symbols-outlined text-[18px]">save</span>
+<span>Save draft</span>
+</button>
+<button class="h-11 flex-1 rounded-xl bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md flex items-center justify-center gap-2 shadow-md active:scale-98 transition-all" id="btn-publish" onclick="executePublish()">
+<span class="material-symbols-outlined text-[18px]">publish</span>
+<span id="btn-publish-label">Publish Note</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Ephemeral Feedback Toast -->
+<div class="fixed top-20 left-1/2 -translate-x-1/2 z-50 px-4 py-2 bg-inverse-surface text-inverse-on-surface rounded-full shadow-lg font-label-md text-label-md opacity-0 pointer-events-none transition-opacity duration-200 flex items-center gap-1.5" id="toast">
+<span class="material-symbols-outlined text-[16px] text-primary-fixed">check_circle</span>
+<span id="toast-message">Draft saved to your library</span>
+</div>
+</div>
+<script>
+  let flaggedCount = 4;
+
+  function togglePopover() {
+    const popover = document.getElementById('uncertainty-popover');
+    if (popover) {
+      popover.classList.toggle('hidden');
+    }
+  }
+
+  function toggleSidePeek() {
+    const panel = document.getElementById('side-peek-panel');
+    if (panel) {
+      panel.classList.toggle('hidden');
+    }
+  }
+
+  function switchView(mode) {
+    const btnText = document.getElementById('btn-view-text');
+    const btnPhoto = document.getElementById('btn-view-photo');
+    if (mode === 'photo') {
+      btnPhoto.classList.add('bg-primary-container', 'text-on-primary', 'shadow-sm');
+      btnPhoto.classList.remove('text-secondary');
+      btnText.classList.remove('bg-primary-container', 'text-on-primary', 'shadow-sm');
+      btnText.classList.add('text-secondary');
+      toggleSidePeek();
+    } else {
+      btnText.classList.add('bg-primary-container', 'text-on-primary', 'shadow-sm');
+      btnText.classList.remove('text-secondary');
+      btnPhoto.classList.remove('bg-primary-container', 'text-on-primary', 'shadow-sm');
+      btnPhoto.classList.add('text-secondary');
+    }
+  }
+
+  function resolveCurrentWord() {
+    const pop = document.getElementById('uncertainty-popover');
+    if (pop) pop.classList.add('hidden');
+    const mark = document.getElementById('target-bromonium');
+    if (mark) {
+      mark.className = 'text-on-surface font-normal';
+    }
+    decrementFlags();
+    showToast("Accepted 'bromonium'");
+  }
+
+  function applyCorrection(term) {
+    const mark = document.getElementById('target-bromonium');
+    if (mark) {
+      mark.textContent = term;
+      mark.className = 'text-on-surface font-normal';
+    }
+    const pop = document.getElementById('uncertainty-popover');
+    if (pop) pop.classList.add('hidden');
+    decrementFlags();
+    showToast(`Updated to '${term}'`);
+  }
+
+  function openManualEdit() {
+    const current = document.getElementById('target-bromonium');
+    const val = prompt('Edit uncertain term:', current.innerText.trim());
+    if (val !== null && val.trim().length > 0) {
+      current.innerText = val.trim();
+      current.className = 'text-on-surface font-normal';
+      decrementFlags();
+      const pop = document.getElementById('uncertainty-popover');
+      if (pop) pop.classList.add('hidden');
+      showToast('Word manually updated');
+    }
+  }
+
+  function decrementFlags() {
+    if (flaggedCount > 0) {
+      flaggedCount--;
+      updateFlagUI();
+    }
+  }
+
+  function resolveAllFlags() {
+    document.querySelectorAll('mark').forEach(el => {
+      el.className = 'text-on-surface font-normal';
+    });
+    flaggedCount = 0;
+    updateFlagUI();
+    showToast('All flagged words accepted');
+  }
+
+  function updateFlagUI() {
+    const countText = document.getElementById('flag-count-text');
+    const tip = document.getElementById('publish-warning-tip');
+    const sub = document.getElementById('readiness-subtitle');
+    const pill = document.getElementById('flag-pill');
+
+    if (flaggedCount === 0) {
+      countText.textContent = 'All cleared';
+      pill.className = 'inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-primary-fixed text-primary font-label-sm text-label-sm shadow-sm';
+      tip.innerHTML = '<span class="material-symbols-outlined text-[14px]">check_circle</span> Ready to publish cleanly';
+      tip.className = 'flex items-center justify-center gap-1.5 py-1 text-center font-label-sm text-label-sm text-primary bg-primary-fixed rounded-lg px-2 shadow-sm transition-all';
+      sub.textContent = 'All handwritten terms verified';
+    } else {
+      countText.textContent = `${flaggedCount} to check`;
+      sub.textContent = `${flaggedCount} items pending editorial review`;
+      tip.innerHTML = `<span class="material-symbols-outlined text-[14px]">info</span> Review recommended: ${flaggedCount} flagged words remain`;
+    }
+  }
+
+  function inspectWord(text) {
+    showToast(`Inspecting snippet for "${text}"`);
+    togglePopover();
+  }
+
+  function saveDraftToast() {
+    showToast('Draft autosaved to your library');
+  }
+
+  function executePublish() {
+    const banner = document.getElementById('publish-banner');
+    banner.classList.remove('hidden');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    showToast('Lecture note published live!');
+  }
+
+  function copyPublishLink(btn) {
+    navigator.clipboard?.writeText('https://classleaf.com/alice/chem-242/lecture-14');
+    btn.innerHTML = '<span class="material-symbols-outlined text-[15px]">check</span> Copied';
+    showToast('Public link copied to clipboard');
+    setTimeout(() => {
+      btn.innerHTML = '<span class="material-symbols-outlined text-[15px]">content_copy</span> Copy';
+    }, 2500);
+  }
+
+  function showToast(msg) {
+    const toast = document.getElementById('toast');
+    const toastMsg = document.getElementById('toast-message');
+    toastMsg.textContent = msg;
+    toast.classList.remove('opacity-0', 'pointer-events-none');
+    setTimeout(() => {
+      toast.classList.add('opacity-0', 'pointer-events-none');
+    }, 2200);
+  }
+</script></main></body></html>

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Source+Serif+4:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100%;margin:0;padding:0;background-color:#fdf9f5;}body{overscroll-behavior:none;-webkit-font-smoothing:antialiased;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-primary-container": "#afefea", "error": "#ba1a1a", "inverse-surface": "#31302e", "on-tertiary-fixed-variant": "#6b3a24", "primary-fixed-dim": "#93d2cd", "on-surface": "#1c1b1a", "on-error-container": "#93000a", "secondary-fixed-dim": "#cdc5bc", "tertiary": "#734029", "surface-container-high": "#ece7e4", "inverse-on-surface": "#f4f0ec", "on-tertiary-container": "#ffdccf", "surface-variant": "#e6e2de", "surface-tint": "#276864", "tertiary-fixed-dim": "#feb698", "secondary": "#635e56", "surface": "#fdf9f5", "primary": "#0e5653", "on-secondary-fixed": "#1e1b15", "surface-bright": "#fdf9f5", "on-secondary-fixed-variant": "#4a463f", "primary-fixed": "#aeeee9", "on-error": "#ffffff", "on-primary-fixed-variant": "#01504c", "error-container": "#ffdad6", "surface-container-lowest": "#ffffff", "outline-variant": "#bfc8c7", "on-primary": "#ffffff", "on-tertiary-fixed": "#351001", "tertiary-container": "#8f573f", "tertiary-fixed": "#ffdbcd", "on-background": "#1c1b1a", "on-primary-fixed": "#00201e", "on-tertiary": "#ffffff", "primary-container": "#2f6f6b", "surface-container-highest": "#e6e2de", "secondary-fixed": "#e9e1d7", "surface-dim": "#ddd9d6", "outline": "#6f7978", "on-surface-variant": "#3f4947", "surface-container": "#f1edea", "on-secondary": "#ffffff", "secondary-container": "#e6dfd4", "inverse-primary": "#93d2cd", "background": "#fdf9f5", "surface-container-low": "#f7f3ef", "on-secondary-container": "#67625a" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-sm": "0.5rem", "space-lg": "1.5rem", "space-md": "1rem", "gutter": "1.5rem", "space-xs": "0.25rem", "margin-mobile": "1.25rem", "gutter-mobile": "1rem", "space-xl": "2rem", "margin": "3rem" }, fontFamily: { "label-md": ["Inter"], "headline-lg-mobile": ["\"Source Serif 4\""], "editorial-body-lg": ["\"Source Serif 4\""], "headline-md": ["\"Source Serif 4\""], "display-mobile": ["\"Source Serif 4\""], "ui-body": ["Inter"], "display": ["\"Source Serif 4\""], "headline-lg": ["\"Source Serif 4\""], "editorial-body": ["\"Source Serif 4\""], "ui-body-medium": ["Inter"], "headline-sm": ["\"Source Serif 4\""], "label-sm": ["Inter"] }, fontSize: { "label-md": ["13px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "500" }], "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "editorial-body-lg": ["18px", { "lineHeight": "30px", "fontWeight": "400" }], "headline-md": ["22px", { "lineHeight": "30px", "fontWeight": "600" }], "display-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "ui-body": ["15px", { "lineHeight": "22px", "fontWeight": "400" }], "display": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "editorial-body": ["17px", { "lineHeight": "29px", "fontWeight": "400" }], "ui-body-medium": ["15px", { "lineHeight": "22px", "fontWeight": "500" }], "headline-sm": ["18px", { "lineHeight": "26px", "fontWeight": "600" }], "label-sm": ["11px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600" }] } } } }</script></head><body class="bg-surface font-ui-body text-ui-body text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-16 px-margin-mobile flex items-center justify-between"><div class="flex items-center gap-space-xs"><button aria-label="Go back" class="w-11 h-11 -ml-2 flex items-center justify-center text-on-surface hover:text-primary transition-colors" onclick="history.back()"><span class="material-symbols-outlined text-[22px]">arrow_back</span></button><img alt="ClassLeaf Emblem" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrAaztFFVqz1lvaOgF9VSJO0XH0_TZQULkqPml39cfuCHL2E5YgrgvQ3t4PGXfsILO7FvN4qo4OU8Rn6geCjZPO12gEDGpFOuTF-m_on_4FRuc0M3bRDIEgXlbGgKpdX9X0mi4FSRZdtzoZ2hS_1p35kcaa4WNmpP6310MhAav7XwHJkrz85B77edCzRyb_Q9D2VjH7Zuk_TNa8_FlRthIAGzcalIIseLzKmmRn3Qg"/><span class="font-headline-sm text-headline-sm text-on-surface truncate max-w-[140px]">Reader Mode</span></div><div class="flex items-center gap-space-sm"><button aria-label="Bookmark" class="w-11 h-11 flex items-center justify-center rounded-full text-secondary hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">bookmark_border</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-16 pb-safe px-margin-mobile bg-surface flex-1"><div class="flex flex-col w-full pb-10">
+<div class="flex flex-col w-full max-w-[680px] mx-auto transition-colors duration-300" id="reader-container">
+<!-- Reader Header Context Panel -->
+<header class="w-full pt-4 pb-6 flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<a class="flex items-center gap-2 group" href="#">
+<img alt="ClassLeaf Emblem" class="w-6 h-6 object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrAaztFFVqz1lvaOgF9VSJO0XH0_TZQULkqPml39cfuCHL2E5YgrgvQ3t4PGXfsILO7FvN4qo4OU8Rn6geCjZPO12gEDGpFOuTF-m_on_4FRuc0M3bRDIEgXlbGgKpdX9X0mi4FSRZdtzoZ2hS_1p35kcaa4WNmpP6310MhAav7XwHJkrz85B77edCzRyb_Q9D2VjH7Zuk_TNa8_FlRthIAGzcalIIseLzKmmRn3Qg"/>
+<span class="font-label-md text-label-md text-secondary group-hover:text-primary transition-colors tracking-wide">ClassLeaf Public</span>
+</a>
+<!-- Reading Mode Pill Toggle -->
+<div aria-label="Theme mode switcher" class="flex items-center bg-surface-container-high p-1 rounded-full shadow-sm" role="radiogroup">
+<button aria-checked="true" class="px-3 py-1 rounded-full text-label-sm font-label-sm flex items-center gap-1.5 bg-surface text-primary shadow-xs transition-all" id="theme-btn-light" onclick="setReadingTheme('light')">
+<span class="material-symbols-outlined text-[15px]">light_mode</span>
+<span>Light</span>
+</button>
+<button aria-checked="false" class="px-3 py-1 rounded-full text-label-sm font-label-sm flex items-center gap-1.5 text-secondary hover:text-on-surface transition-all" id="theme-btn-dark" onclick="setReadingTheme('dark')">
+<span class="material-symbols-outlined text-[15px]">dark_mode</span>
+<span>Dark</span>
+</button>
+</div>
+</div>
+<div class="flex flex-col">
+<p class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Organic Chemistry II (CHEM 242)</p>
+<div class="flex items-center gap-2 mt-1">
+<span class="font-ui-body text-ui-body text-secondary">Curated by <span class="font-ui-body-medium text-ui-body-medium text-on-surface">@alice</span></span>
+<span class="text-outline-variant">•</span>
+<span class="font-ui-body text-ui-body text-secondary">Updated Oct 24</span>
+</div>
+</div>
+</header>
+<!-- Reading Canvas (Main Document Sheet) -->
+<article class="w-full bg-surface-container-lowest rounded-xl p-6 shadow-sm transition-colors duration-300" id="manuscript-card">
+<!-- Meta Information & Badges -->
+<div class="flex flex-wrap items-center gap-2.5 mb-3">
+<span class="inline-flex items-center gap-1.5 bg-primary-fixed text-primary px-2.5 py-0.5 rounded-full font-label-sm text-label-sm font-semibold tracking-wide">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+          Published Oct 24, 2024
+        </span>
+<span class="font-label-sm text-label-sm text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+          5 min read
+        </span>
+</div>
+<!-- Main Note Headline -->
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface leading-tight mb-4 tracking-tight">
+        Lecture 14: Electrophilic Aromatic Substitution & Arenium Ions
+      </h1>
+<!-- Handwritten Scans Interactive Drawer -->
+<div class="w-full my-5 bg-surface-container-low rounded-xl overflow-hidden shadow-xs transition-all">
+<button aria-controls="manuscript-scans" aria-expanded="false" class="w-full px-4 py-3.5 flex items-center justify-between text-left group hover:bg-surface-container transition-colors" id="accordion-toggle" onclick="toggleDrawer()">
+<div class="flex items-center gap-2.5">
+<span class="w-8 h-8 rounded-lg bg-surface-container-highest flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">draw</span>
+</span>
+<div class="flex flex-col">
+<span class="font-ui-body-medium text-ui-body-medium text-on-surface">Original handwritten manuscript</span>
+<span class="font-label-sm text-label-sm text-secondary">2 archival sheets with reaction mechanisms</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-secondary transition-transform duration-200" id="accordion-icon">expand_more</span>
+</button>
+<!-- Hidden Drawer Content -->
+<div class="hidden px-4 pb-4 pt-1 flex-col gap-3" id="manuscript-scans">
+<div class="grid grid-cols-2 gap-3 pt-2">
+<div class="flex flex-col gap-1.5">
+<div class="relative w-full aspect-[3/4] bg-surface-container rounded-lg overflow-hidden shadow-xs group">
+<img class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" data-alt="High resolution scan of cream colored lined lab notebook page covered in handwritten blue ink chemical structures of benzene rings and sigma complexes, curly arrows and detailed notations in margins." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmVio2pgaPsyb-61Wr4iHYQqEZDfApvQqu6Ijco6xvMu0-D850-7NrRGiPxKJhEgW02fU8PJb8dY9-Qf9lwc6we04-Y6q6MKsJ1fDAUYTnNioV1cTIhnu7qpWIGail-ytRTZTQmx65s1c6ll6wZHOZZnVM20lOVWGL9zhKh9KghgK84wDJ9_ibi-3pVAIvrz9MY1EnwtUbItVqDrJVg9cLX7uyzl4_-lfs6HNp"/>
+<div class="absolute bottom-2 left-2 bg-inverse-surface/80 backdrop-blur-md text-inverse-on-surface text-label-sm px-2 py-0.5 rounded">
+                  Page 1: Attack & Resonance
+                </div>
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<div class="relative w-full aspect-[3/4] bg-surface-container rounded-lg overflow-hidden shadow-xs group">
+<img class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" data-alt="Close up archival scan of student laboratory notebook page with hand drawn reaction coordinate diagram showing energy barriers for electrophilic aromatic substitution, notes and annotations." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPYzSXS8sb5nwEy-0AODw6H6MnTKdrrPrF3HnYfamkiEXjI767JfWLk2hYzKthm9mWkQ6ZeuGrpFWDp9knGMwg0OLlBASJzJxOwvCWKVSka9g8sL63C9cquJg8Yika8a2wlhT9eF9ttDW4fVQn0lrzfF2t0w799oqcuDwp0DyrEEZh01A38nre_zt0V4zzGCNNH5Av3l5vDg1XKiaCfJ9HlVNOs0MC3yCdEwA6"/>
+<div class="absolute bottom-2 left-2 bg-inverse-surface/80 backdrop-blur-md text-inverse-on-surface text-label-sm px-2 py-0.5 rounded">
+                  Page 2: Wheland Intermediate
+                </div>
+</div>
+</div>
+</div>
+<p class="font-label-sm text-label-sm text-secondary text-center pt-1 italic">
+            Tap scans to view full-resolution archival plates
+          </p>
+</div>
+</div>
+<!-- Main Article Prose -->
+<div class="flex flex-col gap-5 text-on-surface" id="prose-content">
+<p class="font-editorial-body text-editorial-body leading-relaxed">
+          Electrophilic aromatic substitution (S<sub>E</sub>Ar) is the hallmark reaction of aromatic compounds. Because benzene possesses an exceptionally stable cloud of delocalized π electrons with 36 kcal/mol of resonance stabilization energy, it resists typical addition reactions that would otherwise disrupt aromaticity permanently.
+        </p>
+<!-- Section 1 -->
+<div class="flex flex-col gap-2 mt-2">
+<h2 class="font-headline-sm text-headline-sm text-on-surface flex items-center gap-2">
+<span class="w-6 h-6 rounded-full bg-surface-container-high text-primary flex items-center justify-center font-label-sm">1</span>
+            Generation of the Electrophile
+          </h2>
+<p class="font-editorial-body text-editorial-body leading-relaxed">
+            The aromatic π electron cloud is a relatively weak nucleophile. Ordinary electrophiles like molecular bromine (Br<sub>2</sub>) or chlorine (Cl<sub>2</sub>) are not potent enough to elicit attack. A potent Lewis acid catalyst—typically FeBr<sub>3</sub> or AlCl<sub>3</sub>—must be deployed to coordinate with the halogen, polarizing the covalent bond and generating a fiercely electrophilic species.
+          </p>
+<!-- Styled Quote / Principle with subtle warm left accent -->
+<div class="my-2 pl-4 pr-3 py-3 bg-surface-container-low rounded-r-lg relative overflow-hidden">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-primary"></div>
+<p class="font-editorial-body text-editorial-body italic text-on-surface-variant">
+              “The catalyst does not merely assist; it generates the transient super-electrophile required to overcome the ground-state aromatic stabilization barrier.”
+            </p>
+</div>
+</div>
+<!-- Section 2 -->
+<div class="flex flex-col gap-2 mt-3">
+<h2 class="font-headline-sm text-headline-sm text-on-surface flex items-center gap-2">
+<span class="w-6 h-6 rounded-full bg-surface-container-high text-primary flex items-center justify-center font-label-sm">2</span>
+            Nucleophilic Attack by the π System
+          </h2>
+<p class="font-editorial-body text-editorial-body leading-relaxed">
+            In the rate-determining step (RDS), two π electrons from the benzene ring attack the electrophile E<sup>+</sup>. This generates a non-aromatic, resonance-stabilized carbocation known as an <span class="font-ui-body-medium text-primary">arenium ion</span> (or Wheland intermediate / σ-complex).
+          </p>
+<!-- Inline Visual Diagram Representation -->
+<div class="w-full p-4 bg-surface-container-low rounded-xl flex flex-col items-center justify-center gap-2 my-2 shadow-xs">
+<div class="flex items-center justify-around w-full max-w-[320px] py-2">
+<div class="flex flex-col items-center">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest mb-1">Reactants</span>
+<span class="font-editorial-body text-editorial-body font-semibold">C<sub>6</sub>H<sub>6</sub> + E<sup>+</sup></span>
+<span class="text-label-sm text-secondary font-label-sm">Aromatic (150 kJ/mol)</span>
+</div>
+<span class="material-symbols-outlined text-primary text-[22px]">arrow_forward</span>
+<div class="flex flex-col items-center">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest mb-1">Intermediate</span>
+<span class="font-editorial-body text-editorial-body font-semibold text-primary">[C<sub>6</sub>H<sub>6</sub>E]<sup>+</sup></span>
+<span class="text-label-sm text-secondary font-label-sm">Arenium σ-complex</span>
+</div>
+</div>
+<p class="font-label-sm text-label-sm text-secondary">
+              Three degenerate canonical resonance structures delocalize the positive charge over the <em>ortho</em> and <em>para</em> positions.
+            </p>
+</div>
+</div>
+<!-- Section 3 -->
+<div class="flex flex-col gap-2 mt-3">
+<h2 class="font-headline-sm text-headline-sm text-on-surface flex items-center gap-2">
+<span class="w-6 h-6 rounded-full bg-surface-container-high text-primary flex items-center justify-center font-label-sm">3</span>
+            Deprotonation and Aromatization
+          </h2>
+<p class="font-editorial-body text-editorial-body leading-relaxed">
+            Because re-establishing the 6π aromatic sextet provides immense thermodynamic driving force, the arenium ion rapidly sheds an sp<sup>3</sup>-bound proton. The conjugate Lewis base abstracts H<sup>+</sup>, restoring full aromaticity and regenerating the acid catalyst in a fast, highly exergonic step.
+          </p>
+</div>
+<!-- Takeaways Parchment Callout -->
+<div class="w-full mt-4 p-5 rounded-xl bg-secondary-container text-on-secondary-container shadow-xs flex flex-col gap-3" id="takeaways-box">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined text-[20px]">eco</span>
+<span class="font-ui-body-medium text-ui-body-medium uppercase tracking-wider text-label-sm font-semibold">Key Takeaways</span>
+</div>
+<ul class="flex flex-col gap-2.5 font-editorial-body text-editorial-body">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[16px] text-primary mt-1">check_circle</span>
+<span><strong>Substitution over addition:</strong> Benzene prefers substitution to preserve its 36 kcal/mol resonance stabilization.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[16px] text-primary mt-1">check_circle</span>
+<span><strong>RDS:</strong> Formation of the non-aromatic arenium ion is the slow kinetic rate-limiting barrier.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[16px] text-primary mt-1">check_circle</span>
+<span><strong>Regeneration:</strong> Deprotonation is ultrafast and reconstitutes the Lewis acid catalyst.</span>
+</li>
+</ul>
+</div>
+</div>
+</article>
+<!-- Theme Showcase & Night Comfort Preview Strip -->
+<div class="w-full mt-6 p-4 rounded-xl bg-surface-container-low flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">bedtime</span>
+<span class="font-ui-body-medium text-ui-body-medium text-on-surface">Night Study Comfort</span>
+</div>
+<button class="font-label-sm text-label-sm text-primary hover:underline flex items-center gap-1" onclick="toggleTheme()">
+<span id="quick-toggle-label">Switch to Dark</span>
+<span class="material-symbols-outlined text-[14px]">tune</span>
+</button>
+</div>
+<p class="font-editorial-body text-label-md text-secondary leading-snug">
+        ClassLeaf uses warm charcoal tones and softened contrast to prevent eye fatigue during late-night library sessions.
+      </p>
+</div>
+<!-- Quiet Scholarly Footer -->
+<footer class="w-full mt-10 pt-6 flex flex-col items-center text-center gap-4">
+<div class="w-8 h-0.5 rounded-full bg-surface-container-highest"></div>
+<div class="flex flex-col gap-1">
+<p class="font-ui-body text-ui-body text-on-surface">
+          Made with <span class="font-ui-body-medium text-primary">ClassLeaf</span>
+</p>
+<p class="font-label-sm text-label-sm text-secondary">
+          A quiet archival space for student notes & scholarly manuscripts.
+        </p>
+</div>
+<!-- Action Button Group -->
+<div class="flex items-center gap-3 mt-2">
+<button class="px-5 py-2.5 rounded-xl bg-primary text-on-primary font-ui-body-medium text-ui-body-medium shadow-sm hover:opacity-90 active:scale-95 transition-all flex items-center gap-2" id="share-btn" onclick="copyNotebookLink()">
+<span class="material-symbols-outlined text-[18px]">ios_share</span>
+<span id="share-btn-text">Share notebook</span>
+</button>
+<button class="px-4 py-2.5 rounded-xl bg-surface-container text-on-surface font-ui-body-medium text-ui-body-medium hover:bg-surface-container-high transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">print</span>
+<span>Print / PDF</span>
+</button>
+</div>
+<div class="text-[12px] text-secondary mt-4">
+        Zero advertisements • Distraction-free public reader
+      </div>
+</footer>
+</div>
+</div>
+<script>
+  let currentTheme = 'light';
+
+  function setReadingTheme(mode) {
+    currentTheme = mode;
+    const manuscriptCard = document.getElementById('manuscript-card');
+    const lightBtn = document.getElementById('theme-btn-light');
+    const darkBtn = document.getElementById('theme-btn-dark');
+    const quickToggleLabel = document.getElementById('quick-toggle-label');
+    const takeawaysBox = document.getElementById('takeaways-box');
+
+    if (mode === 'dark') {
+      manuscriptCard.classList.remove('bg-surface-container-lowest');
+      manuscriptCard.classList.add('bg-inverse-surface');
+      manuscriptCard.classList.remove('text-on-surface');
+      manuscriptCard.classList.add('text-inverse-on-surface');
+
+      // Update toggle pills
+      lightBtn.classList.remove('bg-surface', 'text-primary', 'shadow-xs');
+      lightBtn.classList.add('text-secondary');
+      lightBtn.setAttribute('aria-checked', 'false');
+
+      darkBtn.classList.add('bg-surface-variant', 'text-primary', 'shadow-xs');
+      darkBtn.classList.remove('text-secondary');
+      darkBtn.setAttribute('aria-checked', 'true');
+
+      if (quickToggleLabel) quickToggleLabel.textContent = 'Switch to Light';
+      if (takeawaysBox) {
+        takeawaysBox.classList.remove('bg-secondary-container', 'text-on-secondary-container');
+        takeawaysBox.classList.add('bg-surface-container-highest', 'text-on-surface');
+      }
+    } else {
+      manuscriptCard.classList.add('bg-surface-container-lowest');
+      manuscriptCard.classList.remove('bg-inverse-surface');
+      manuscriptCard.classList.add('text-on-surface');
+      manuscriptCard.classList.remove('text-inverse-on-surface');
+
+      // Update toggle pills
+      darkBtn.classList.remove('bg-surface-variant', 'text-primary', 'shadow-xs');
+      darkBtn.classList.add('text-secondary');
+      darkBtn.setAttribute('aria-checked', 'false');
+
+      lightBtn.classList.add('bg-surface', 'text-primary', 'shadow-xs');
+      lightBtn.classList.remove('text-secondary');
+      lightBtn.setAttribute('aria-checked', 'true');
+
+      if (quickToggleLabel) quickToggleLabel.textContent = 'Switch to Dark';
+      if (takeawaysBox) {
+        takeawaysBox.classList.add('bg-secondary-container', 'text-on-secondary-container');
+        takeawaysBox.classList.remove('bg-surface-container-highest', 'text-on-surface');
+      }
+    }
+  }
+
+  function toggleTheme() {
+    setReadingTheme(currentTheme === 'light' ? 'dark' : 'light');
+  }
+
+  function toggleDrawer() {
+    const drawer = document.getElementById('manuscript-scans');
+    const icon = document.getElementById('accordion-icon');
+    const button = document.getElementById('accordion-toggle');
+    const isHidden = drawer.classList.contains('hidden');
+
+    if (isHidden) {
+      drawer.classList.remove('hidden');
+      drawer.classList.add('flex');
+      icon.style.transform = 'rotate(180deg)';
+      button.setAttribute('aria-expanded', 'true');
+    } else {
+      drawer.classList.add('hidden');
+      drawer.classList.remove('flex');
+      icon.style.transform = 'rotate(0deg)';
+      button.setAttribute('aria-expanded', 'false');
+    }
+  }
+
+  function copyNotebookLink() {
+    const textEl = document.getElementById('share-btn-text');
+    const originalText = textEl.textContent;
+    textEl.textContent = 'Link copied!';
+    setTimeout(() => {
+      textEl.textContent = originalText;
+    }, 2000);
+  }
+</script></main></body></html>
