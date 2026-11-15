@@ -124,7 +124,37 @@ create index if not exists idx_images_note_id on public.images(note_id);
 create index if not exists idx_jobs_notebook_id on public.jobs(notebook_id);
 create index if not exists idx_jobs_status on public.jobs(status);
 
--- 7. Row Level Security (RLS) Configuration
+-- 7. Security Definer Helper Functions (Breaks RLS Cross-Table Infinite Recursion)
+create or replace function public.is_notebook_owner(p_notebook_id uuid)
+returns boolean
+language sql
+security definer
+set search_path = public
+stable
+as $$
+  select exists (
+    select 1 from public.notebooks
+    where id = p_notebook_id
+      and owner_id = auth.uid()
+  );
+$$;
+
+create or replace function public.is_note_owner(p_note_id uuid)
+returns boolean
+language sql
+security definer
+set search_path = public
+stable
+as $$
+  select exists (
+    select 1 from public.notes
+    join public.notebooks on notebooks.id = notes.notebook_id
+    where notes.id = p_note_id
+      and notebooks.owner_id = auth.uid()
+  );
+$$;
+
+-- 8. Row Level Security (RLS) Configuration
 
 alter table public.profiles enable row level security;
 alter table public.notebooks enable row level security;
@@ -157,6 +187,8 @@ create policy "notebooks_owner_all"
 create policy "notebooks_select_public_published"
   on public.notebooks for select
   using (
+    auth.uid() = owner_id
+    or
     exists (
       select 1 from public.notes
       where notes.notebook_id = notebooks.id
@@ -165,23 +197,12 @@ create policy "notebooks_select_public_published"
   );
 
 -- Notes RLS:
--- Fully accessible to the notebook owner; readable by anyone only when status is published
+-- Fully accessible to the notebook owner (uses security definer helper to prevent RLS recursion);
+-- Readable by anyone only when status is published
 create policy "notes_owner_all"
   on public.notes for all
-  using (
-    exists (
-      select 1 from public.notebooks
-      where notebooks.id = notes.notebook_id
-        and notebooks.owner_id = auth.uid()
-    )
-  )
-  with check (
-    exists (
-      select 1 from public.notebooks
-      where notebooks.id = notes.notebook_id
-        and notebooks.owner_id = auth.uid()
-    )
-  );
+  using (public.is_notebook_owner(notebook_id))
+  with check (public.is_notebook_owner(notebook_id));
 
 create policy "notes_select_public_published"
   on public.notes for select
@@ -191,22 +212,8 @@ create policy "notes_select_public_published"
 -- Fully accessible to the owner; readable by anyone only for images of published notes
 create policy "images_owner_all"
   on public.images for all
-  using (
-    exists (
-      select 1 from public.notes
-      join public.notebooks on notebooks.id = notes.notebook_id
-      where notes.id = images.note_id
-        and notebooks.owner_id = auth.uid()
-    )
-  )
-  with check (
-    exists (
-      select 1 from public.notes
-      join public.notebooks on notebooks.id = notes.notebook_id
-      where notes.id = images.note_id
-        and notebooks.owner_id = auth.uid()
-    )
-  );
+  using (public.is_note_owner(note_id))
+  with check (public.is_note_owner(note_id));
 
 create policy "images_select_public_published"
   on public.images for select
@@ -222,22 +229,10 @@ create policy "images_select_public_published"
 -- Owner only: full access to jobs in their notebooks
 create policy "jobs_owner_all"
   on public.jobs for all
-  using (
-    exists (
-      select 1 from public.notebooks
-      where notebooks.id = jobs.notebook_id
-        and notebooks.owner_id = auth.uid()
-    )
-  )
-  with check (
-    exists (
-      select 1 from public.notebooks
-      where notebooks.id = jobs.notebook_id
-        and notebooks.owner_id = auth.uid()
-    )
-  );
+  using (public.is_notebook_owner(notebook_id))
+  with check (public.is_notebook_owner(notebook_id));
 
--- 8. Storage Configuration (Private bucket for note images)
+-- 9. Storage Configuration (Private bucket for note images)
 -- Bucket creation
 insert into storage.buckets (id, name, public)
 values ('note-images', 'note-images', false)

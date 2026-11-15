@@ -16,7 +16,11 @@ drop table if exists public.images cascade;
 drop table if exists public.notes cascade;
 drop table if exists public.notebooks cascade;
 
--- 3. Drop Triggers and Functions on Profiles & Auth
+-- 3. Drop Security Definer Helper Functions
+drop function if exists public.is_note_owner(uuid);
+drop function if exists public.is_notebook_owner(uuid);
+
+-- 4. Drop Triggers and Functions on Profiles & Auth
 drop trigger if exists on_auth_user_created on auth.users;
 drop function if exists public.handle_new_user();
 
