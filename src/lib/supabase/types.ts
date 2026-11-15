@@ -71,6 +71,7 @@ export type Database = {
           flags: Json;
           status: 'draft' | 'published';
           created_at: string;
+          updated_at: string;
           published_at: string | null;
         };
         Insert: {
@@ -81,6 +82,7 @@ export type Database = {
           flags?: Json;
           status?: 'draft' | 'published';
           created_at?: string;
+          updated_at?: string;
           published_at?: string | null;
         };
         Update: {
@@ -91,6 +93,7 @@ export type Database = {
           flags?: Json;
           status?: 'draft' | 'published';
           created_at?: string;
+          updated_at?: string;
           published_at?: string | null;
         };
         Relationships: [
